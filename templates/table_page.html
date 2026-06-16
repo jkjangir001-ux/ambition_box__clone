@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Data</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Filtered Job Data</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Company Names</th>
+        <th>Jobs</th>
+        <th>Salary</th>
+        <th>Location</th>
+        <th>Industry</th>
+        <th>About</th>
+        <th>Review</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in data %}
+      <tr>
+        <td>{{ row.Company_Names }}</td>
+        <td>{{ row.Jobs }}</td>
+        <td>{{ row.Salery }}</td>
+        <td>{{ row.Location }}</td>
+        <td>{{ row.Industry }}</td>
+        <td>{{ row.About }}</td>
+        <td>{{ row.Review }}</td>
+        <td>{{ row.Rating }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="/">Back to Home</a>
+</div>
+</body>
+</html>

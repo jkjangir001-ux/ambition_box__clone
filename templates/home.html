@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambitionbox Job Analysis</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+  <div class="card">
+    <div class="header">
+      <h2>Ambitionbox Job Analysis</h2>
+    </div>
+
+    <form method="POST">
+      <div class="form-group">
+        <label>Location</label>
+        <select name="location">
+          <option>Select Location</option>
+          {% for location in locations %}
+            <option>{{ location }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Industry</label>
+        <select name="industry">
+          <option>Select Industry</option>
+          {% for industry in industries %}
+            <option>{{ industry }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Rating</label>
+        <select name="rating">
+          <option>Select Rating</option>
+          {% for rating in ratings %}
+            <option>{{ rating }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Type</label>
+        <select name="job_type">
+          <option>Select Type</option>
+          <option>Full-time</option>
+          <option>Part-time</option>
+          <option>Internship</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Output</label>
+        <div class="radio-group">
+          <label><input type="radio" name="output" value="table" checked> Table</label>
+          <label><input type="radio" name="output" value="charts"> Charts</label>
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+  </div>
+
+</body>
+</html>
